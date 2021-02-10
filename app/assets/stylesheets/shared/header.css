@@ -1,0 +1,28 @@
+.top-page-header {
+  display: flex;
+  justify-content: space-between;
+  height: 100px;
+  background-color: brown;
+  color: white;
+}
+
+.app-name h2 {
+  /* background-color: grey; */
+  font-size: 50px;
+  margin: 10px 0 0 30px;
+}
+
+.categories {
+  display: flex;
+}
+
+.lists {
+  display: flex;
+  margin-right: 70px;
+  /* background-color: yellowgreen; */
+  padding-top: 35px;
+}
+
+.lists li {
+  padding-left: 60px;
+}
