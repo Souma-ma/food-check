@@ -6,6 +6,7 @@ class Food < ApplicationRecord
     validates :protein
     validates :fat
     validates :carbohydrate
+    validates :image
   end
 
   with_options format: {with: /\A[0-9]+\z/} do
