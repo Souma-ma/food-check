@@ -1,6 +1,6 @@
 class Food < ApplicationRecord
 
-  with_options presense: true do
+  with_options presence: true do
     validates :name
     validates :calorie
     validates :protein
