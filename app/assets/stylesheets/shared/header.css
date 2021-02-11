@@ -2,8 +2,8 @@
   display: flex;
   justify-content: space-between;
   height: 100px;
-  background-color: brown;
-  color: white;
+  background-color: #eeeeee;
+  color: #808080;
 }
 
 .app-name h2 {
