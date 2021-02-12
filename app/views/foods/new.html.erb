@@ -1,0 +1,60 @@
+<%= render "shared/header"%>
+
+<div class="page-name">
+  <h2>食材投稿ページ</h2>
+</div>
+
+<%= form_with model: @food, url: foods_path,class: "forms", local: true do |f| %>
+  <div class="form-group">
+    <div class="form-label">
+      <%= f.label :image, "食材画像" %>
+    </div>
+    <%= f.file_field :image,  class: "form-content" %>
+  </div>
+  <div class="form-group">
+    <div class="form-label">
+      <%= f.label :name, "食材名" %>
+    </div>
+    <%= f.text_field :name,  class: "form-content" %>
+  </div>
+  <div class="form-group">
+    <div class="form-label">
+      <%= f.label :calorie, "カロリー" %>
+    </div>
+    <%= f.text_field :calorie, placeholder: "kcal",maxlength: 4, class: "form-content" %>
+  </div>
+  <div class="form-group">
+    <div class="form-label">
+      <%= f.label :protein, "たんぱく質" %>
+    </div>
+    <%= f.text_field :protein,placeholder: "g",maxlength: 4, class: "form-content" %>
+  </div>
+  <div class="form-group">
+    <div class="form-label">
+      <%= f.label :fat, "脂質" %>
+    </div>
+    <%= f.text_field :fat, placeholder: "g",maxlength: 3, class: "form-content" %>
+  </div>
+  <div class="form-group">
+    <div class="form-label">
+      <%= f.label :carbohydrate, "炭水化物" %>
+    </div>
+    <%= f.text_field :carbohydrate,placeholder: "g",maxlength: 4, class: "form-content" %>
+  </div>
+  <div class="form-btn">
+    <%= f.submit "保存", class: "btn" %>
+  </div>
+<% end %>
+  
+  
+
+  
+  
+
+
+
+
+
+<div class="food-lists">
+  <%= link_to "トップページへ", root_path %>
+</div>
