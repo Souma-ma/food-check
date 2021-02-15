@@ -13,3 +13,13 @@
  *= require_tree .
  *= require_self
  */
+
+
+ .pagination {
+  text-align: center;
+  font-size: 20px;
+}
+
+.pagination span a {
+  text-decoration: none;
+}

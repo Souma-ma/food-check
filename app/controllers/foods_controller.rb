@@ -1,5 +1,6 @@
 class FoodsController < ApplicationController
   def index
+    @foods = Food.all.page(params[:page]).per(4)
   end
 
   def new
