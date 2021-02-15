@@ -1,8 +1,38 @@
 <%= render "shared/header"%>
 
-<div class="food-lists">
-  <%= link_to "新規投稿", new_food_path %>
+<%# ここに検索するフォームを配置する %>
+<div class="form">
+  <div class="input">
+    <input class="form-search" placeholder= "調べたい食材を入力してください.">
+  </div>
+  <input class="submit-btn" type="submit" value="検索">
 </div>
+
+<p class="title">食材一覧</p>
+
+<div class="food-contents">
+  <ul class="food-lists">
+    <% @foods.each do |food| %>
+      <div class="food-info">
+      <%= image_tag food.image, class: "food-img" %>
+      <h3 class="food-name">
+        <%= food.name %>
+      </h3>
+      <p class="info"><%= food.calorie %>kcal</p>
+      <p class="info">たんぱく質:<%= food.protein %>g</p>
+      <p class="info">脂質:<%= food.fat %>g</p>
+      <p class="info">炭水化物:<%= food.carbohydrate %>g</p>
+      </div>
+    <% end %>
+  </ul>
+</div>
+
+<div class="page-nate">
+<%= paginate @foods %>
+</div>
+
+
+  <%# <%= link_to "新規投稿", new_food_path %>
 
 
 <%= render "shared/footer"%>
