@@ -16,6 +16,10 @@ class FoodsController < ApplicationController
     end
   end
 
+  def search
+    @foods = Food.search(params[:keyword])
+  end
+
   
   
   private
