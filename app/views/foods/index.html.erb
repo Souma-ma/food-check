@@ -11,6 +11,7 @@
 <div class="food-contents">
   <ul class="food-lists">
     <% @foods.each do |food| %>
+    <%= link_to food_path(food.id), class: "food-link" do %>
       <div class="food-info">
       <%= image_tag food.image, class: "food-img" %>
       <div class="contents">
@@ -23,6 +24,7 @@
       <p class="info">炭水化物:<%= food.carbohydrate %>g</p>
       </div>
       </div>
+      <% end %>
     <% end %>
   </ul>
 </div>
