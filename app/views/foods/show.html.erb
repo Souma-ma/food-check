@@ -20,10 +20,10 @@
 
 <div class="buttons">
   <div class="button">
-    <%= link_to "編集" , {controller: 'foods', action: 'show'}, style:"color:white; background-color: green; text-decoration: none; padding: 10px;" %>
+    <%= link_to "編集", edit_food_path(@food.id), method: :get %>
   </div>
   <div class="button">
-    <%= link_to "削除" , {controller: 'foods', action: 'show'}, style:"color: white; background-color:#7B3CFF; text-decoration: none; padding: 10px;"%>
+    <%= link_to "削除" %>
   </div>
 </div>
 
