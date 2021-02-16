@@ -23,3 +23,67 @@
 .pagination span a {
   text-decoration: none;
 }
+
+.search-form {
+  margin-top: 30px;
+  text-align: center;
+}
+
+.search-input {
+  padding: 10px 150px;
+  border: 1px solid #AAAAAA;
+}
+
+.search-btn {
+  padding: 15px 20px;
+  color: white;
+  background-color: #FF9872;
+  border: none;
+  border-radius: 10%;
+}
+
+.search-btn:hover {
+  background-color: #FF4500;
+}
+
+.food-contents {
+  background-color: #fff;
+  margin-top: 50px;
+  width: 100vw;
+}
+
+.food-lists {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  margin: 0 120px;
+}
+
+.food-img {
+  width: 30vh;
+  height: 30vh;
+  padding-top: 30px;
+}
+
+.food-name {
+  font-size: 25px;
+  font-family: 'Bookman Old Style';
+  border-bottom: 1px solid #CCCCCC;
+  padding-bottom: 3px;
+}
+
+.info {
+  font-size: 16px;
+  font-family: serif;
+  margin-top: 3px;
+}
+
+.contents {
+  border: 1px solid #cccccc;
+  padding: 8px 10px 10px 10px;
+  margin-top: 10px;
+}
+
+.no-hit {
+  text-align: center
+}

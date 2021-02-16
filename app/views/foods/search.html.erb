@@ -6,8 +6,13 @@
   <%= f.submit "検索", class: "search-btn" %>
 <% end %>
 
-<p class="title">食材一覧</p>
+<% if @foods.presence %>
+  <%= link_to "トップページへ" ,root_path %>
+<% end %>
 
+<p class="title">検索結果</p>
+
+<% unless @foods.blank? %>
 <div class="food-contents">
   <ul class="food-lists">
     <% @foods.each do |food| %>
@@ -26,13 +31,15 @@
     <% end %>
   </ul>
 </div>
-
-<div class="page-nate">
-<%= paginate @foods %>
+<% else %>
+<div class="no-hit">
+  <p>検索した食材はありません。</p>
+  <p>ひらがなやカタカナ検索もお試しください。</p>
+  <p>空欄で検索している場合もございます。</p>
+  <%= link_to "トップページへ" ,root_path %>
 </div>
+<% end %>
 
 
-  <%= link_to "新規投稿", new_food_path %>
 
 
-<%= render "shared/footer"%>
