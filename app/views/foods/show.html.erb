@@ -1,0 +1,30 @@
+<%= render "shared/header"%>
+
+<div class="food-contents">
+  <ul class="food-lists">
+      <div class="food-info">
+      <%= image_tag @food.image, class: "food-img" %>
+      <div class="contents">
+      <h3 class="food-name">
+        <%= @food.name %>
+      </h3>
+      <p class="info"><%= @food.calorie %>kcal</p>
+      <p class="info">たんぱく質:<%= @food.protein %>g</p>
+      <p class="info">脂質:<%= @food.fat %>g</p>
+      <p class="info">炭水化物:<%= @food.carbohydrate %>g</p>
+      </div>
+      </div>
+  </ul>
+</div>
+
+
+<div class="buttons">
+  <div class="button">
+    <%= link_to "編集" , {controller: 'foods', action: 'show'}, style:"color:white; background-color: green; text-decoration: none; padding: 10px;" %>
+  </div>
+  <div class="button">
+    <%= link_to "削除" , {controller: 'foods', action: 'show'}, style:"color: white; background-color:#7B3CFF; text-decoration: none; padding: 10px;"%>
+  </div>
+</div>
+
+<%= link_to "新規投稿", new_food_path %>

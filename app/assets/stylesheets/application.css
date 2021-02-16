@@ -59,6 +59,11 @@
   margin: 0 120px;
 }
 
+.food-link {
+  text-decoration: none;
+  color: #000011;
+}
+
 .food-img {
   width: 30vh;
   height: 30vh;
@@ -86,4 +91,14 @@
 
 .no-hit {
   text-align: center
+}
+
+.buttons {
+  text-align: center;
+  margin-top: 100px;
+  font-size: 30px;
+}
+
+.button {
+  margin-top: 50px;
 }
