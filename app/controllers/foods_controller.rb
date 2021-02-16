@@ -1,4 +1,6 @@
 class FoodsController < ApplicationController
+  before_action :get_food, only: [:show, :edit]
+
   def index
     @foods = Food.all.page(params[:page]).per(4)
   end
@@ -17,11 +19,9 @@ class FoodsController < ApplicationController
   end
 
   def show
-    @food = Food.find(params[:id])
   end
 
   def edit
-    @food = Food.find(params[:id])
   end
 
   def update
@@ -43,7 +43,11 @@ class FoodsController < ApplicationController
 
   def food_params
     params.require(:food).permit(:image, :name, :calorie, :protein, :fat, :carbohydrate)
-  end 
+  end
+
+  def get_food
+    @food = Food.find(params[:id])
+  end
   
   
   
