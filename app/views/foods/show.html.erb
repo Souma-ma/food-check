@@ -1,3 +1,5 @@
+<%= render "shared/header"%>
+
 <div class="food-contents">
   <ul class="food-lists">
       <div class="food-info">
@@ -24,3 +26,5 @@
     <%= link_to "削除" , {controller: 'foods', action: 'show'}, style:"color: white; background-color:#7B3CFF; text-decoration: none; padding: 10px;"%>
   </div>
 </div>
+
+<%= link_to "新規投稿", new_food_path %>

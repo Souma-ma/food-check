@@ -12,6 +12,11 @@
   margin: 10px 0 0 30px;
 }
 
+.title-header {
+  text-decoration: none;
+  color: #808080;
+}
+
 .categories {
   display: flex;
 }
