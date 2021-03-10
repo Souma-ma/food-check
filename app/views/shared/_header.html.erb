@@ -6,10 +6,15 @@
   </div>
   <div class="categories">
     <ul class="lists">
-      <li>マイページ</li>
+      <li>Check myselfへ</li>
       <li>カテゴリー</li>
-      <li>新規登録</li>
-      <li>ログイン</li>
+      <% if user_signed_in? %>
+        <li class="userName"><%= current_user.nickname %>さん</li>
+        <li><%= link_to 'ログアウト' , destroy_user_session_path, method: :delete, class: "userList" %></li>
+      <% else %>
+        <li><%= link_to '新規登録' , new_user_registration_path, class: "userList" %></li>
+        <li><%= link_to 'ログイン' , new_user_session_path, class: "userList" %></li>
+      <% end %>
     </ul>
   </div>
 </header>

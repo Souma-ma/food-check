@@ -3,7 +3,7 @@
   justify-content: space-between;
   height: 100px;
   background-color: #eeeeee;
-  color: #808080;
+  color: #777777;
 }
 
 .app-name h2 {
@@ -30,4 +30,13 @@
 
 .lists li {
   padding-left: 60px;
+}
+
+.userList {
+  text-decoration: none;
+  color: #222222	;
+}
+
+.userName {
+  color: #222222;
 }

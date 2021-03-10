@@ -102,3 +102,42 @@
 .button {
   margin-top: 50px;
 }
+
+.page-name{
+  font-size: 25px;
+}
+
+.box {
+  margin: 100px auto;
+  width: 700px;
+  height: 500px;
+  border: 2px dashed rgba(90, 88, 65, 0.7);
+  position: relative;
+}
+
+.box-inner {
+  padding: 80px 0 0 150px;
+}
+
+.field {
+  margin-top: 10px;
+}
+
+.field input[type="email"] {
+  padding-left: 10px;
+  width: 350px;
+  height: 35px;
+}
+
+.field input[type="password"] {
+  padding-left: 10px;
+  width: 350px;
+  height: 35px;
+}
+.actions input[type="submit"] {
+  position: absolute;
+  top: 400px;
+  left: 290px;
+  padding: 10px 20px;
+  color: #333;
+}
