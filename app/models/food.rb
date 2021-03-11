@@ -9,7 +9,7 @@ class Food < ApplicationRecord
     validates :image
   end
 
-  with_options numericality: {only_integer: true} , format: { with: /\A[0-9]+\z/ } do
+  with_options numericality: true do
     validates :calorie
     validates :protein
     validates :fat
