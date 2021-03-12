@@ -6,9 +6,9 @@
   </div>
   <div class="categories">
     <ul class="lists">
-      <li>Check myselfへ</li>
       <li>カテゴリー</li>
       <% if user_signed_in? %>
+        <li>マイページ</li>
         <li class="userName"><%= current_user.nickname %>さん</li>
         <li><%= link_to 'ログアウト' , destroy_user_session_path, method: :delete, class: "userList" %></li>
       <% else %>

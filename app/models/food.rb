@@ -16,6 +16,7 @@ class Food < ApplicationRecord
     validates :carbohydrate
   end
 
+  has_many :favorites, dependent: :destroy
   has_one_attached :image
 
   def self.search(search)
