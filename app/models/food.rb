@@ -17,6 +17,7 @@ class Food < ApplicationRecord
   end
 
   has_many :favorites, dependent: :destroy
+  has_many :users, through: :favorites
   has_one_attached :image
 
   def self.search(search)
