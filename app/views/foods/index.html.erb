@@ -23,6 +23,17 @@
       <p class="info">脂質:<%= food.fat %>g</p>
       <p class="info">炭水化物:<%= food.carbohydrate %>g</p>
       </div>
+        <% if user_signed_in? %>
+          <% if current_user.already_favorited?(food) %>
+            <%= link_to food_favorites_path(food), method: :delete do %>
+              <i class="fas fa-star"></i>
+            <% end %>
+          <% else %>
+            <%= link_to food_favorites_path(food), method: :post  do %>
+              <i class="far fa-star"></i>
+            <% end %>
+          <% end %>
+        <% end %>
       </div>
       <% end %>
     <% end %>
