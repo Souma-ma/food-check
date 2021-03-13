@@ -1,4 +1,30 @@
 .top-page-footer {
-  height: 176px;
+  height: 140px;
   background-color: #F8F8FF;
 }
+
+.navi {
+  font-size: 18px;
+  color: 	#555555;
+  padding: 10px 0 0 10px;
+}
+
+.navi:hover {
+  cursor: pointer;
+  color: #111111;
+}
+
+.foot {
+  font-weight: bold;
+  color: #DCDCDC;
+  text-align: center;
+}
+
+.sentence {
+  padding-left: 100px;
+}
+
+.hidden {
+  display: none;
+}
+

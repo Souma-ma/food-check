@@ -1,0 +1,18 @@
+.second-page-header {
+  display: flex;
+  justify-content: space-between;
+  height: 100px;
+  background-color: #E6FFE9;
+}
+
+.second-app-name h2 {
+  font-size: 50px;
+  margin: 10px 0 0 30px;
+  color: #008800;
+}
+
+.secondList {
+  text-decoration: none;
+  color:#005500;
+}
+

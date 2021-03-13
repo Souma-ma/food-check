@@ -14,6 +14,9 @@
  *= require_self
  */
 
+@import 'font-awesome-sprockets';
+@import 'font-awesome';
+
 
  .pagination {
   text-align: center;
@@ -140,4 +143,22 @@
   left: 290px;
   padding: 10px 20px;
   color: #333;
+}
+
+.fas {
+  color: #FFD700;
+}
+
+.far {
+  color: #FFD700;
+}
+
+.banner {
+  color: #FFD700;
+  background-color: #FFFFCC;
+  opacity: 0.8;
+  padding: 5px 0 5px 20px;
+  font-size: 20px;
+  font-weight: bold;
+  margin-top: 15px;
 }
