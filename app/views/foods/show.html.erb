@@ -18,13 +18,16 @@
 </div>
 
 
-<div class="buttons">
-  <div class="button">
-    <%= link_to "編集", edit_food_path(@food.id), method: :get %>
+<% if user_signed_in? && current_user.admin? %>
+  <div class="buttons">
+    <div class="button">
+      <%= link_to "新規投稿", new_food_path %>
+    </div>
+    <div class="button">
+      <%= link_to "編集", edit_food_path(@food.id), method: :get %>
+    </div>
+    <div class="button">
+      <%= link_to "削除", food_path, method: :delete %>
+    </div>
   </div>
-  <div class="button">
-    <%= link_to "削除", food_path, method: :delete %>
-  </div>
-</div>
-
-<%= link_to "新規投稿", new_food_path %>
+<% end %>
