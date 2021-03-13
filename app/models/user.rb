@@ -8,4 +8,9 @@ class User < ApplicationRecord
   validates :password, format: { with: /\A(?=.*?[a-z])(?=.*?\d)[a-z\d]+\z/i } # 半角英数混合
 
   has_many :favorites, dependent: :destroy
+  has_many :foods, through: :favorites
+
+  def already_favorited?(food)
+    self.favorites.exists?(food_id: food.id)
+  end
 end
