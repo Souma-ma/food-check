@@ -25,6 +25,7 @@
 
 .pagination span a {
   text-decoration: none;
+  color: #555;
 }
 
 .search-form {
@@ -104,6 +105,12 @@
 
 .button {
   margin-top: 50px;
+  text-align: center;
+}
+
+.backtop {
+  text-decoration: none;
+  color: #555;
 }
 
 .page-name{
