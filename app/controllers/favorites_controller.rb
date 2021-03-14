@@ -1,8 +1,6 @@
 class FavoritesController < ApplicationController
-  before_action :authenticate_user!
   before_action :get_food
 
-  # お気に入りを作成する処理
   def create
     Favorite.create(user_id: current_user.id, food_id: @food.id)
     redirect_back(fallback_location: root_path)
