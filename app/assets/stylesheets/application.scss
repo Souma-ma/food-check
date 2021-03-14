@@ -94,8 +94,13 @@
 }
 
 .no-hit {
-  text-align: center
+  text-align: center;
 }
+
+.no-hit p {
+  margin-bottom: 5px;
+}
+
 
 .buttons {
   text-align: center;
@@ -111,6 +116,7 @@
 .backtop {
   text-decoration: none;
   color: #555;
+  font-size: 20px;
 }
 
 .page-name{
