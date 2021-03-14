@@ -1,4 +1,6 @@
 class FoodsController < ApplicationController
+  before_action :authenticate_user!, only: [:new, :edit]
+  before_action :back_top, only: [:new, :edit]
   before_action :get_food, only: [:show, :edit]
 
   def index
@@ -55,6 +57,11 @@ class FoodsController < ApplicationController
     @food = Food.find(params[:id])
   end
   
+  def back_top
+    unless current_user.admin?
+      redirect_to root_path
+    end
+  end
   
   
 end
