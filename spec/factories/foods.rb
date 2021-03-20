@@ -7,7 +7,7 @@ FactoryBot.define do
     carbohydrate {200.0}
 
     after(:build) do |food|
-      food.image.attach(io: File.open('public/images/test-img.jpg'), filename: 'test-img.jpg')
+      food.image.attach(io: File.open('public/images/test.jpg'), filename: 'test.jpg')
     end
   end
 end
