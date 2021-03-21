@@ -15,6 +15,13 @@ class Food < ApplicationRecord
     validates :carbohydrate
   end
 
+  with_options numericality: { greater_than_or_equal_to: 0 } do
+    validates :calorie
+    validates :protein
+    validates :fat
+    validates :carbohydrate
+  end
+
   has_many :favorites, dependent: :destroy
   has_many :users, through: :favorites
   has_one_attached :image
