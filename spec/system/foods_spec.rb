@@ -8,14 +8,8 @@ RSpec.describe "Foods", type: :system do
 
 context '食材投稿できるとき' do
   it 'ログインした管理者は食材投稿できる' do
-   # ログインする
-    visit root_path
-    visit new_user_session_path
-    fill_in 'user[email]', with: @user.email
-    fill_in 'user[password]', with: @user.password
-    find('input[name="commit"]').click
-  # トップページに遷移する
-    visit root_path
+  # ログインする
+    sign_in(@user)
   # トップページに食材投稿ボタンがある
     expect(page).to have_content('食材投稿')
   # 食材投稿ページに遷移する
@@ -50,13 +44,7 @@ end
 context '食材投稿できないとき' do
   it 'ログインした管理者でも正しい情報を入力しないと投稿できない' do
   # ログインする
-    visit root_path
-    visit new_user_session_path
-    fill_in 'user[email]', with: @user.email
-    fill_in 'user[password]', with: @user.password
-    find('input[name="commit"]').click
-  # トップページに遷移する
-    visit root_path
+    sign_in(@user)
   # トップページに食材投稿ボタンがある
     expect(page).to have_content('食材投稿')
   # 食材投稿ページに遷移する
@@ -86,11 +74,7 @@ RSpec.describe "Foods", type: :system do
   context '食材削除できるとき' do
     it 'ログインした管理者は投稿した食材を削除できる' do
     # ログインする
-      visit root_path
-      visit new_user_session_path
-      fill_in 'user[email]', with: @user.email
-      fill_in 'user[password]', with: @user.password
-      find('input[name="commit"]').click
+      sign_in(@user)
     # トップページに遷移する
       visit root_path
     # 投稿した食材詳細ページに遷移する
@@ -111,13 +95,7 @@ RSpec.describe "Foods", type: :system do
   context '食材編集できるとき' do
     it 'ログインした管理者は投稿した食材を編集できる' do
      # ログインする
-      visit root_path
-      visit new_user_session_path
-      fill_in 'user[email]', with: @user.email
-      fill_in 'user[password]', with: @user.password
-      find('input[name="commit"]').click
-     # トップページに遷移する
-      visit root_path
+      sign_in(@user)
      # 食材詳細ページに遷移する
       visit food_path(@food.id)
      # 編集ボタンがあることを確認する
@@ -142,13 +120,7 @@ RSpec.describe "Foods", type: :system do
     end
   it 'ログインした管理者が投稿した食材を編集できない場合' do
     # ログインする
-      visit root_path
-      visit new_user_session_path
-      fill_in 'user[email]', with: @user.email
-      fill_in 'user[password]', with: @user.password
-      find('input[name="commit"]').click
-    # トップページに遷移する
-      visit root_path
+      sign_in(@user)
     #食材詳細ページに遷移する
       visit food_path(@food.id)
     #編集ボタンがあることを確認する
