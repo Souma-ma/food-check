@@ -13,6 +13,7 @@ class FavoritesController < ApplicationController
   end
 
   private
+
   def get_food
     @food = Food.find(params[:food_id])
   end

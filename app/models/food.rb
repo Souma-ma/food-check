@@ -1,5 +1,4 @@
 class Food < ApplicationRecord
-
   with_options presence: true do
     validates :name
     validates :calorie
@@ -21,8 +20,6 @@ class Food < ApplicationRecord
   has_one_attached :image
 
   def self.search(search)
-    if search != ""
-      Food.where('name LIKE(?)', "%#{search}%")
-    end
+    Food.where('name LIKE(?)', "%#{search}%") if search != ''
   end
 end
