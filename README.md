@@ -27,7 +27,7 @@
 
 # 本番環境
    ### URL
-   (https://food-check-app.herokuapp.com/)
+   https://food-check-app.herokuapp.com/
 ## ログイン情報
   #### (管理者)
   - Eメール： rizin@email.com
