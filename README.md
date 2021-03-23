@@ -26,7 +26,8 @@
     基礎代謝計算機能  
 
 # 本番環境
-   <!-- Urlを貼る -->
+   ### URL
+   (https://food-check-app.herokuapp.com/)
 ## ログイン情報
   #### (管理者)
   - Eメール： rizin@email.com
