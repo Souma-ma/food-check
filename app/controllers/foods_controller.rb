@@ -45,8 +45,6 @@ class FoodsController < ApplicationController
     @foods = Food.search(params[:keyword])
   end
 
-  
-  
   private
 
   def food_params
@@ -56,13 +54,8 @@ class FoodsController < ApplicationController
   def get_food
     @food = Food.find(params[:id])
   end
-  
-  def back_top
-    unless current_user.admin?
-      redirect_to root_path
-    end
-  end
-  
-  
-end
 
+  def back_top
+    redirect_to root_path unless current_user.admin?
+  end
+end

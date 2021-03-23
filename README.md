@@ -1,13 +1,111 @@
-# テーブル設計
+# アプリ名
+### Food Check / Check myself
+
+
+# 概要
+ - 食材の栄養素を検索できます。
+ - 食材をお気に入り登録できます。
+ - お気に入りした食材をマイページに保存できます。
+ - 基礎代謝を計算できます。
+
+## Food Check と Check myselfで機能を分けています
+### 【Food Check】
+  (ユーザー登録に関わらず誰でも)
+    栄養素検索機能
+
+  (ユーザー登録した方)
+    お気に入り機能
+
+  (管理者)
+    食材の栄養素と画像投稿機能
+    編集・削除機能
+
+### 【Check myself】
+  (ユーザー登録した方のみ利用可能)
+    マイページ機能
+    お気に入り一覧表示機能
+    基礎代謝計算機能
+
+# 本番環境
+   <!-- Urlを貼る -->
+## ログイン情報
+  #### (管理者)
+  - Eメール： rizin@email.com
+  - パスワード：admin3350277
+  ** seeds.rbに環境変数で作成しました。**
+ #### (ユーザー)
+  - Eメール： test@email.com
+  - パスワード：test123
+
+# 制作背景(意図)
+  #### ペルソナ
+   日々の食事を見直したい方を対象、栄養成分表示が記されていない食材などを各々調べる時間を短縮することに着目しました。
+
+   また、こんなものがあればいいなという開発者の私の思いから制作しました。
+
+
+# 工夫したポイント
+  ログインのしているかどうか・管理者かどうかの使用するユーザーごとに機能を分けたこと。
+  管理者(開発者)として使用しながら、利用するユーザーに価値を提供するコンセプトにしたこと。
+
+#### 未ログインユーザー
+  - 検索機能のみが使用できる。
+#### ログインユーザー
+  - 検索機能、お気に入り機能、マイページ機能が使用できる。
+#### 管理者
+  - 食材の投稿、編集・削除ができる
+
+
+
+# 実装した機能
+##### 検索機能
+  - ユーザーが知りたい食材の栄養素を検索ができる
+##### 新規登録/ログイン機能
+  - お気に入り登録ができる
+  - マイページ機能が使える
+##### 管理者機能
+  - ログインした管理者のみに食材の情報(画像、栄養素)を登録できる
+  - 情報の編集・削除が行える。
+##### お気に入り機能
+  - 食材情報の下の星をクリックするとお気に入りができる
+##### マイページ機能
+  - お気に入り登録した食材の一覧表示
+  - 基礎代謝計算機能
+
+
+# 使用技術(開発環境)
+  ## バックエンド
+    Ruby on rails 6.0
+    Ruby 2.6.5  
+  ## フロントエンド
+    HTML  CSS  JavaScript
+  ## データベース
+    MySQL
+  ## ソース管理
+    GitHub , GitHub Desktop
+  ## テスト
+    RSpec
+  ## エディタ
+    VSCode
+
+# 課題や今後実装したい機能
+  フロントのデザインをもっとこだわること。
+  Ajaxで非同期通信を用いること。
+  食材だけでなく、レシピ検索機能であったり、1日の摂取カロリーをグラフで見れるような機能を実装していこうと思います。
+
+
+
+
+# DB設計
 
 ## usersテーブル
 
-| Column             | Type   | Options                   |
-| ------------------ | ------ | ------------------------- |
-| nickname           | string | null: false               |
-| email              | string | null: false, unique: true |
-| encrypted_password | string | null: false               |
-
+| Column             | Type     | Options                      |
+| ------------------ | -------  | -------------------------    |
+| nickname           | string   | null:    false               |
+| email              | string   | null:    false, unique: true |
+| encrypted_password | string   | null:    false               |
+| admin              | boolean  | default: false
 
 ### Association
 
@@ -30,7 +128,7 @@
 - has_many :favorites
 - belongs_to :category
 
-## categoriesテーブル
+<!-- ## categoriesテーブル
 
 | Column | Type   | Options     |
 | ------ | ------ | ----------- |
@@ -38,7 +136,7 @@
 
 ### Association
 
-- has_many :foods
+- has_many :foods -->
 
 ## favoritesテーブル
 
@@ -58,7 +156,7 @@
 | Column      | Type       | Options                        |
 | ----------- | ---------- | ------------------------------ |
 | today       | date       | null: false                    |
-| exercise_id | integer    | null: false                    |
+| exercise    | integer    | null: false                    |
 | user        | references | null: false, foreign_key: true |
 
 
