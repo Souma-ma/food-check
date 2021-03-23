@@ -68,3 +68,5 @@ gem 'kaminari'
 gem 'devise'
 
 gem 'font-awesome-sass', '~> 5.4.1'
+
+gem "aws-sdk-s3", require: false
