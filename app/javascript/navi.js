@@ -2,7 +2,7 @@ function foodNavi() {
   const button = document.getElementById('navi');
   const sentence = document.getElementById('sentence');
 
-  button.addEventListener('click', () => {
+  button.addEventListener('mouseover', () => {
     if (sentence.getAttribute("style") == "display:block;") {
       sentence.removeAttribute("style" , "display:block;")
     } else{

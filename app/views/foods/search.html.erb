@@ -6,9 +6,6 @@
   <%= f.submit "検索", class: "search-btn" %>
 <% end %>
 
-<% if @foods.presence %>
-  <%= link_to "トップページへ" ,root_path %>
-<% end %>
 
 <p class="title">検索結果</p>
 
@@ -36,9 +33,9 @@
   <p>検索した食材はありません。</p>
   <p>ひらがなやカタカナ検索もお試しください。</p>
   <p>空欄で検索している場合もございます。</p>
-  <%= link_to "トップページへ戻る" ,root_path, class: "backtop" %>
 </div>
 <% end %>
+<%= link_to "トップページへ戻る" ,root_path, class: "backtop" %>
 
 
 
