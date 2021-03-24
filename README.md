@@ -26,8 +26,8 @@
     基礎代謝計算機能  
 
 # 本番環境
-   ### URL
-   https://food-check-app.herokuapp.com/
+   ### URL(AWS EC2)
+   http://35.72.42.61/
 ## ログイン情報
   #### (管理者)
   - Eメール： rizin@email.com
